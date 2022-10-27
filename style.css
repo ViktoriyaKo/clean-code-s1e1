@@ -1,4 +1,5 @@
 /* Basic Style */
+
 body {
   background-color: #f8f8f8;
   color: #333;
@@ -19,6 +20,8 @@ button {
   outline: none;
 }
 
+/* Header-style */
+
 .header {
   width: 500px;
   margin: 0 auto;
@@ -26,7 +29,7 @@ button {
   text-align: right;
 }
 
-.header img {
+.header__img {
   width: 100%;
 }
 
@@ -39,6 +42,7 @@ button {
     text-align: center;
   }
 }
+
 .main {
   display: block;
   width: 500px;
@@ -67,12 +71,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.main__btn_add:hover, 
+.main__btn_edit:hover,
+.main__btn_delete:hover {
   color: #3a3a3a;
 }
-/* Heading */
-h3,
-label[for="newTask"] {
+
+.main__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -99,8 +104,8 @@ label[for="newTask"] {
   color: #333;
 }
 
-/* New Task */
-label[for="newTask"] {
+/* New Task ИЗМЕНИТЬ!!!!!!!!!!!!!!!! */
+.header h2 {
   display: block;
   margin: 0 0 20px;
 }
@@ -138,13 +143,13 @@ label[for="newTask"] {
   width: 226px;
 }
 
-.main__btn_delete img {
+.main__item_img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.main__btn_delete img:hover {
+.main__item_img:hover {
   transform: rotateZ(0);
 }
 

@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<head>
-  <title>Todo App</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" 
-        rel="stylesheet">
-  <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen">
+    <h1>Todo list</h1>
+    <title>Todo App</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./eisenhower-matrix.jpg" class="header__img">
+      <a class="header__ref"
+          href="https://goal-life.com/page/method/matrix-eisenhower">
+          Want more details?
+      </a>
+    </header>
+    <main class="main">
+      <section class="main__add-item">
+        <h2 class="main__header">Add Item</h2>
+        <div class="main__task">
+          <input id="newTask" class="main__input" type="text">
+          <button class="main__btn_add">Add</button>
+        </div>
+      </section>
 
-<body>
-  <div class="header">
-    <img src="./eisenhower-matrix.jpg">
-    <a class="header__ref" 
-        href="https://goal-life.com/page/method/matrix-eisenhower">
-        Want more details?
-    </a>
-  </div>
-  <div class="main">
-    
-    <label for="newTask">Add Item</label>
-      <div class="main__task">
-        <input id="newTask" class="main__input" type="text">
-        <button class="main__btn_add">Add</button>
-      </div>
-    
-    <h3>Todo</h3>
-    <ul id="incompleteTasks" class="main__list">
-      <li class="main__item">
-        <input type="checkbox" class="main__input_checkbox">
-        <label class="main__input">Pay Bills</label>
-        <input type="text" class="main__input">
-        <button class="main__btn_edit">Edit</button>
-        <button class="main__btn_delete"><img src="./remove.svg"></button>
-      </li>
-      <li class="main__item editMode">
-        <input type="checkbox" class="main__input_checkbox">
-        <label class="main__input">Go Shopping</label>
-        <input type="text" value="Go Shopping" class="main__input">
-        <button class="main__btn_edit">Save</button>
-        <button class="main__btn_delete"><img src="./remove.svg"></button>
-      </li>
-    </ul>
-    <h3>Completed</h3>
-    <ul id="completedTasks" class="main__list">
-      <li class="main__item">
-        <input type="checkbox" class="main__input_checkbox" checked>
-        <label class="main__input">See the Doctor</label>
-        <input type="text" class="main__input">
-        <button class="main__btn_edit">Edit</button>
-        <button class="main__btn_delete"><img src="./remove.svg"></button>
-      </li>
-    </ul>
-  </div>
-  <script src="app.js"></script>
-</body>
+      <section class="main__incomplete-tasks">
+        <h2 class="main__header">Todo</h2>
+        <ul id="incompleteTasks" class="main__list">
+          <li class="main__item">
+            <input type="checkbox" class="main__input_checkbox">
+            <label class="main__input">Pay Bills</label>
+            <input type="text" class="main__input">
+            <button class="main__btn_edit">Edit</button>
+            <button class="main__btn_delete"><img src="./remove.svg" class="main__item_img"></button>
+          </li>
+          <li class="main__item editMode">
+            <input type="checkbox" class="main__input_checkbox">
+            <label class="main__input">Go Shopping</label>
+            <input type="text" value="Go Shopping" class="main__input">
+            <button class="main__btn_edit">Save</button>
+            <button class="main__btn_delete"><img src="./remove.svg" class="main__item_img"></button>
+          </li>
+        </ul>
+      </section>
 
+      <section class="main__completed-tasks">
+        <h2 class="main__header">Completed</h2>
+        <ul id="completedTasks" class="main__list">
+          <li class="main__item">
+            <input type="checkbox" class="main__input_checkbox" checked>
+            <label class="main__input">See the Doctor</label>
+            <input type="text" class="main__input">
+            <button class="main__btn_edit">Edit</button>
+            <button class="main__btn_delete"><img src="./remove.svg" class="main__item_img"></button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
-
-<!-- 3.3. Лаконичность названий идентификаторов и классов -->
