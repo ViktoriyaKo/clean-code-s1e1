@@ -4,6 +4,20 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
+
+ul {
+  margin:0;
+  padding: 0px;
+}
+
+li {
+  list-style:none;
+}
+
+input, button{
+  outline: none;
+}
+
 .header {
   width: 500px;
   margin: 0 auto;
@@ -34,17 +48,10 @@ body {
 .main__task {
   display: flex;
 }
-ul {
-  margin:0;
-  padding: 0px;
-}
-li, h3 {
-  list-style:none;
-}
-input,button{
-  outline:none;
-}
-button {
+
+.main__btn_add,
+.main__btn_edit,
+.main__btn_delete {
   background: none;
   border: 0px;
   color: #888;
@@ -58,7 +65,7 @@ button:hover {
 }
 /* Heading */
 h3,
-label[for="new-task"] {
+label[for="newTask"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -67,7 +74,7 @@ label[for="new-task"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.main__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -79,21 +86,21 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.main__input:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+label[for="newTask"] {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+.main__task > .main__input {
   width: 318px;
 }
 
 /* Task list */
-li {
+.main__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -102,20 +109,20 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.main__item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.main__input_checkbox {
   margin: 0 10px;
 }
-li > label {
+.main__item > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >  input[type="text"] {
+.main__input {
   width: 226px
 }
 .main__btn_delete img {
