@@ -10,7 +10,7 @@
 var taskInput = document.getElementById("newTask"); //Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; //first button
 var incompleteTaskHolder = document.getElementById("incompleteTasks"); //ul of #incompleteTasks
-var completedTasksHolder = document.getElementById("completedTasks"); //completed-tasks
+var completeTasksHolder = document.getElementById("completeTasks"); //completed-tasks
 
 //New task list item
 var createNewTaskElement = function (taskString) {
@@ -32,7 +32,7 @@ var createNewTaskElement = function (taskString) {
   deleteButtonImg.classList.add("main__item_img");
   
   label.innerText = taskString;
-  label.className = "main__input";
+  label.className = "main__label";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
@@ -79,7 +79,7 @@ var editTask = function () {
   var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".main__btn_edit");
-  var containsClass = listItem.classList.contains("editMode");
+  var containsClass = listItem.classList.contains("edit-mode");
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
@@ -92,7 +92,7 @@ var editTask = function () {
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("editMode");
+  listItem.classList.toggle("edit-mode");
 };
 
 //Delete task.
@@ -111,7 +111,7 @@ var taskCompleted = function () {
 
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
-  completedTasksHolder.appendChild(listItem);
+  completeTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 };
 
@@ -159,9 +159,9 @@ for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
 }
 
 //cycle over completedTasksHolder ul list items
-for (var i = 0; i < completedTasksHolder.children.length; i++) {
+for (var i = 0; i < completeTasksHolder.children.length; i++) {
   //bind events to list items chldren(tasksIncompleted)
-  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+  bindTaskEvents(completeTasksHolder.children[i], taskIncomplete);
 }
 
 // Issues with usability don't get seen until they are in front of a human tester.

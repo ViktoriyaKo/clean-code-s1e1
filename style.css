@@ -33,6 +33,10 @@ button {
   width: 100%;
 }
 
+.header__caption_hidden {
+  display: none;
+}
+
 .header__ref {
   font-family: fantasy, cursive;
 }
@@ -104,13 +108,13 @@ button {
   color: #333;
 }
 
-/* New Task ИЗМЕНИТЬ!!!!!!!!!!!!!!!! */
-.header h2 {
+/* New Task*/
+.main__new-task .main__header {
   display: block;
   margin: 0 0 20px;
 }
 
-.main__task > .main__input {
+.main__new-task .main__input {
   width: 318px;
 }
 
@@ -124,19 +128,16 @@ button {
   align-items: center;
 }
 
-.main__item > * {
-  vertical-align: middle;
-}
-
 .main__input_checkbox {
   margin: 0 10px;
 }
 
-.main__input {
+.main__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  flex-grow: 1;
 }
 
 .main__input {
@@ -154,21 +155,21 @@ button {
 }
 
 /* Completed */
-ul#completedTasks label {
+.main__completed-tasks .main__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.main__item .main__input {
   display: none;
 }
 
-ul li.editMode input[type="text"] {
+.edit-mode .main__input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.edit-mode .main__label {
   display: none;
 }
