@@ -14,7 +14,8 @@ li {
   list-style: none;
 }
 
-input, button {
+input,
+button {
   outline: none;
 }
 
@@ -34,10 +35,9 @@ input, button {
 }
 
 @media (max-width: 768px) {
-.header {
-  text-align: center;
-}
-
+  .header {
+    text-align: center;
+  }
 }
 .main {
   display: block;
@@ -48,7 +48,7 @@ input, button {
 .main__input {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .main__task {
@@ -68,7 +68,7 @@ input, button {
 }
 
 button:hover {
-  color: #3a3A3a;
+  color: #3a3a3a;
 }
 /* Heading */
 h3,
@@ -88,8 +88,8 @@ label[for="newTask"] {
   line-height: 18px;
   height: 21px;
   padding: 0 9px;
-  border: 1px solid #dDd;
-  background: #FFF;
+  border: 1px solid #ddd;
+  background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
@@ -136,7 +136,7 @@ label[for="newTask"] {
 }
 
 .main__input {
-  width: 226px
+  width: 226px;
 }
 
 .main__btn_delete img {
@@ -150,19 +150,19 @@ label[for="newTask"] {
 }
 
 /* Completed */
-.main__list label {
-  text-decoration: line-through
+ul#completedTasks label {
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
-  display: none
+ul li input[type="text"] {
+  display: none;
 }
 
-ul li.editMode input[type=text] {
+ul li.editMode input[type="text"] {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 ul li.editMode label {
