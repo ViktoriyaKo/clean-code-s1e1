@@ -13,7 +13,7 @@ body {
 .header img {
   width: 100%;
 }
-.header .header__ref {
+.header__ref {
   font-family: fantasy, cursive;
 }
 
@@ -128,7 +128,7 @@ li >  input[type="text"] {
 }
 
 /* Completed */
-ul#completed-tasks label {
+.main__list label {
   text-decoration: line-through
   color: #888;
 }
